@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct URLRequestFactory {
+struct URLRequestFactory: URLRequestProviding {
     
     private let endpointProvider: APIProviding
     
@@ -16,7 +16,7 @@ struct URLRequestFactory {
         self.endpointProvider = endpointProvider
     }
     
-    func productSearchRequest(searchTerm: String, pageSize: Int) -> URLRequest? {
+    func generateProductSearchRequest(searchTerm: String, pageSize: Int) -> URLRequest? {
         guard let URL = endpointProvider.productSearchURL(query: searchTerm, pageSize: pageSize) else {
             return nil
         }

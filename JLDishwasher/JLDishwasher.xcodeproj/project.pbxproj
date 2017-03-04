@@ -17,6 +17,10 @@
 		5B76A58F1E6AE72D00020167 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A58E1E6AE72D00020167 /* URLRequestFactory.swift */; };
 		5B76A5921E6AE90A00020167 /* URLRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5911E6AE90A00020167 /* URLRequestFactoryTests.swift */; };
 		5B76A5941E6AED3E00020167 /* APIProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5931E6AED3E00020167 /* APIProviding.swift */; };
+		5B76A5AF1E6B00DC00020167 /* ProductSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5AD1E6B00DC00020167 /* ProductSearcher.swift */; };
+		5B76A5B01E6B00DC00020167 /* RemoteProductSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5AE1E6B00DC00020167 /* RemoteProductSearching.swift */; };
+		5B76A5C21E6B280000020167 /* ProductSearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5C11E6B280000020167 /* ProductSearcherTests.swift */; };
+		5B76A5C41E6B28A900020167 /* URLRequestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5C31E6B28A900020167 /* URLRequestProviding.swift */; };
 		D940CD4C58517EFCCDBC2186 /* Pods_JLDishwasher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DEE752EA622FD9B3533ED3 /* Pods_JLDishwasher.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,10 @@
 		5B76A58E1E6AE72D00020167 /* URLRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
 		5B76A5911E6AE90A00020167 /* URLRequestFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestFactoryTests.swift; sourceTree = "<group>"; };
 		5B76A5931E6AED3E00020167 /* APIProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProviding.swift; sourceTree = "<group>"; };
+		5B76A5AD1E6B00DC00020167 /* ProductSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearcher.swift; sourceTree = "<group>"; };
+		5B76A5AE1E6B00DC00020167 /* RemoteProductSearching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProductSearching.swift; sourceTree = "<group>"; };
+		5B76A5C11E6B280000020167 /* ProductSearcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearcherTests.swift; sourceTree = "<group>"; };
+		5B76A5C31E6B28A900020167 /* URLRequestProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestProviding.swift; sourceTree = "<group>"; };
 		851CAB1A7E1609173875212B /* Pods-JLDishwasher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLDishwasher.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLDishwasher/Pods-JLDishwasher.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +138,7 @@
 		5B76A55F1E6AD64400020167 /* JLDishwasherTests */ = {
 			isa = PBXGroup;
 			children = (
+				5B76A5C01E6B27D600020167 /* Product Searcher */,
 				5B76A5901E6AE8F600020167 /* URL Request Factory */,
 				5B76A5841E6AD92100020167 /* APIConfiguration */,
 				5B76A5871E6AE21500020167 /* Supporting Files */,
@@ -191,6 +200,7 @@
 		5B76A5811E6AD8C500020167 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5B76A5AC1E6B00CD00020167 /* Product Search */,
 				5B76A58D1E6AE71200020167 /* URL Request Factory */,
 				5B76A5881E6AE2AF00020167 /* API Configuration */,
 			);
@@ -225,6 +235,7 @@
 		5B76A58D1E6AE71200020167 /* URL Request Factory */ = {
 			isa = PBXGroup;
 			children = (
+				5B76A5C31E6B28A900020167 /* URLRequestProviding.swift */,
 				5B76A58E1E6AE72D00020167 /* URLRequestFactory.swift */,
 			);
 			name = "URL Request Factory";
@@ -236,6 +247,23 @@
 				5B76A5911E6AE90A00020167 /* URLRequestFactoryTests.swift */,
 			);
 			name = "URL Request Factory";
+			sourceTree = "<group>";
+		};
+		5B76A5AC1E6B00CD00020167 /* Product Search */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5AE1E6B00DC00020167 /* RemoteProductSearching.swift */,
+				5B76A5AD1E6B00DC00020167 /* ProductSearcher.swift */,
+			);
+			name = "Product Search";
+			sourceTree = "<group>";
+		};
+		5B76A5C01E6B27D600020167 /* Product Searcher */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5C11E6B280000020167 /* ProductSearcherTests.swift */,
+			);
+			name = "Product Searcher";
 			sourceTree = "<group>";
 		};
 		C1C6C904DA22200427BCB41D /* Frameworks */ = {
@@ -439,6 +467,9 @@
 				5B76A5941E6AED3E00020167 /* APIProviding.swift in Sources */,
 				5B76A58F1E6AE72D00020167 /* URLRequestFactory.swift in Sources */,
 				5B76A5831E6AD90800020167 /* EndpointProvider.swift in Sources */,
+				5B76A5B01E6B00DC00020167 /* RemoteProductSearching.swift in Sources */,
+				5B76A5C41E6B28A900020167 /* URLRequestProviding.swift in Sources */,
+				5B76A5AF1E6B00DC00020167 /* ProductSearcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B76A5C21E6B280000020167 /* ProductSearcherTests.swift in Sources */,
 				5B76A5921E6AE90A00020167 /* URLRequestFactoryTests.swift in Sources */,
 				5B76A5861E6AD94100020167 /* EndpointProviderTests.swift in Sources */,
 			);

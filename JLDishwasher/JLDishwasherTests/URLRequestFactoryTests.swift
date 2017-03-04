@@ -28,7 +28,7 @@ class URLRequestFactoryTests: XCTestCase {
     
     func testProductSearchRequestCreatedWithExpectedURL() {
         
-        guard let request = requestFactory?.productSearchRequest(searchTerm: "search", pageSize: 5) else {
+        guard let request = requestFactory?.generateProductSearchRequest(searchTerm: "search", pageSize: 5) else {
             XCTFail("request shouldn't be nil")
             return
         }
