@@ -10,9 +10,14 @@ import Foundation
 
 struct URLRequestFactory: URLRequestProviding {
     
-    private let endpointProvider: APIProviding
+    private let endpointProvider: EndpointProviding
     
-    init(endpointProvider: APIProviding) {
+    static func defaultInstance() -> URLRequestFactory {
+        let defaultEndpointProvider = EndpointProvider(key: "Wu1Xqn3vNrd1p7hqkvB6hEu0G9OrsYGb")
+        return URLRequestFactory(endpointProvider: defaultEndpointProvider)
+    }
+    
+    init(endpointProvider: EndpointProviding) {
         self.endpointProvider = endpointProvider
     }
     

@@ -1,0 +1,27 @@
+{
+    "products": [{
+                 "productId": "1",
+                 "title": "Dishwasher 1",
+                 "price": {
+                 "now": "449.00",
+                 "currency": "GBP"
+                 },
+                 "image": "//johnlewis.scene7.com/is/image/JohnLewis/1?"
+                 }, {
+                 "productId": "2",
+                 "title": "Dishwasher 2",
+                 "price": {
+                 "now": "199.00",
+                 "currency": "GBP"
+                 },
+                 "image": "//johnlewis.scene7.com/is/image/JohnLewis/2?"
+                 }, {
+                 "productId": "3",
+                 "title": "Dishwasher 3",
+                 "price": {
+                 "now": "249.00",
+                 "currency": "GBP"
+                 },
+                 "image": "//johnlewis.scene7.com/is/image/JohnLewis/3?"
+                 }]
+}

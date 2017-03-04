@@ -13,7 +13,7 @@ let stubbedURL = URL(string: "http://example.com")
 
 class URLRequestFactoryTests: XCTestCase {
     
-    struct MockAEndpointProvider: APIProviding {
+    struct MockAEndpointProvider: EndpointProviding {
         func productSearchURL(query: String, pageSize: Int) -> URL? {
             return stubbedURL
         }

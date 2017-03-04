@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct EndpointProvider: APIProviding {
+struct EndpointProvider: EndpointProviding {
     
     private let key: String
     private let scheme = "https"

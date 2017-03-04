@@ -1,5 +1,5 @@
 //
-//  APIProviding.swift
+//  EndpointProviding.swift
 //  JLDishwasher
 //
 //  Created by Martin Oppetit on 04/03/2017.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol APIProviding {
+protocol EndpointProviding {
     func productSearchURL(query: String, pageSize: Int) -> URL?
 }

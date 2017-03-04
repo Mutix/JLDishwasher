@@ -12,7 +12,7 @@ import XCTest
 class EndpointProviderTests: XCTestCase {
     
     let APIKey = "12345"
-    var endpointProvider: APIProviding?
+    var endpointProvider: EndpointProviding?
     
     override func setUp() {
         super.setUp()
