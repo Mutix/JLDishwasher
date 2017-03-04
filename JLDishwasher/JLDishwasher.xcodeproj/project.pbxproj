@@ -12,8 +12,11 @@
 		5B76A5531E6AD64400020167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B76A5521E6AD64400020167 /* Assets.xcassets */; };
 		5B76A5561E6AD64400020167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B76A5541E6AD64400020167 /* LaunchScreen.storyboard */; };
 		5B76A56C1E6AD64400020167 /* JLDishwasherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A56B1E6AD64400020167 /* JLDishwasherUITests.swift */; };
-		5B76A5831E6AD90800020167 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5821E6AD90800020167 /* APIConfiguration.swift */; };
-		5B76A5861E6AD94100020167 /* APIConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5851E6AD94100020167 /* APIConfigurationTests.swift */; };
+		5B76A5831E6AD90800020167 /* EndpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5821E6AD90800020167 /* EndpointProvider.swift */; };
+		5B76A5861E6AD94100020167 /* EndpointProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5851E6AD94100020167 /* EndpointProviderTests.swift */; };
+		5B76A58F1E6AE72D00020167 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A58E1E6AE72D00020167 /* URLRequestFactory.swift */; };
+		5B76A5921E6AE90A00020167 /* URLRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5911E6AE90A00020167 /* URLRequestFactoryTests.swift */; };
+		5B76A5941E6AED3E00020167 /* APIProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5931E6AED3E00020167 /* APIProviding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +48,11 @@
 		5B76A5671E6AD64400020167 /* JLDishwasherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLDishwasherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B76A56B1E6AD64400020167 /* JLDishwasherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLDishwasherUITests.swift; sourceTree = "<group>"; };
 		5B76A56D1E6AD64400020167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B76A5821E6AD90800020167 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
-		5B76A5851E6AD94100020167 /* APIConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfigurationTests.swift; sourceTree = "<group>"; };
+		5B76A5821E6AD90800020167 /* EndpointProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointProvider.swift; sourceTree = "<group>"; };
+		5B76A5851E6AD94100020167 /* EndpointProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointProviderTests.swift; sourceTree = "<group>"; };
+		5B76A58E1E6AE72D00020167 /* URLRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
+		5B76A5911E6AE90A00020167 /* URLRequestFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestFactoryTests.swift; sourceTree = "<group>"; };
+		5B76A5931E6AED3E00020167 /* APIProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProviding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				5B76A57D1E6AD6AB00020167 /* App Delegate */,
-				5B76A5801E6AD8A900020167 /* Product Grid */,
 				5B76A5811E6AD8C500020167 /* Services */,
 				5B76A5791E6AD67B00020167 /* Resources */,
 				5B76A57C1E6AD69500020167 /* Supporting Files */,
@@ -109,6 +114,7 @@
 		5B76A55F1E6AD64400020167 /* JLDishwasherTests */ = {
 			isa = PBXGroup;
 			children = (
+				5B76A5901E6AE8F600020167 /* URL Request Factory */,
 				5B76A5841E6AD92100020167 /* APIConfiguration */,
 				5B76A5871E6AE21500020167 /* Supporting Files */,
 			);
@@ -166,17 +172,11 @@
 			name = "App Delegate";
 			sourceTree = "<group>";
 		};
-		5B76A5801E6AD8A900020167 /* Product Grid */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Product Grid";
-			sourceTree = "<group>";
-		};
 		5B76A5811E6AD8C500020167 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5B76A5821E6AD90800020167 /* APIConfiguration.swift */,
+				5B76A58D1E6AE71200020167 /* URL Request Factory */,
+				5B76A5881E6AE2AF00020167 /* API Configuration */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 		5B76A5841E6AD92100020167 /* APIConfiguration */ = {
 			isa = PBXGroup;
 			children = (
-				5B76A5851E6AD94100020167 /* APIConfigurationTests.swift */,
+				5B76A5851E6AD94100020167 /* EndpointProviderTests.swift */,
 			);
 			name = APIConfiguration;
 			sourceTree = "<group>";
@@ -195,6 +195,31 @@
 				5B76A5621E6AD64400020167 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B76A5881E6AE2AF00020167 /* API Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5931E6AED3E00020167 /* APIProviding.swift */,
+				5B76A5821E6AD90800020167 /* EndpointProvider.swift */,
+			);
+			name = "API Configuration";
+			sourceTree = "<group>";
+		};
+		5B76A58D1E6AE71200020167 /* URL Request Factory */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A58E1E6AE72D00020167 /* URLRequestFactory.swift */,
+			);
+			name = "URL Request Factory";
+			sourceTree = "<group>";
+		};
+		5B76A5901E6AE8F600020167 /* URL Request Factory */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5911E6AE90A00020167 /* URLRequestFactoryTests.swift */,
+			);
+			name = "URL Request Factory";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,7 +361,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B76A54C1E6AD64400020167 /* AppDelegate.swift in Sources */,
-				5B76A5831E6AD90800020167 /* APIConfiguration.swift in Sources */,
+				5B76A5941E6AED3E00020167 /* APIProviding.swift in Sources */,
+				5B76A58F1E6AE72D00020167 /* URLRequestFactory.swift in Sources */,
+				5B76A5831E6AD90800020167 /* EndpointProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +371,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B76A5861E6AD94100020167 /* APIConfigurationTests.swift in Sources */,
+				5B76A5921E6AE90A00020167 /* URLRequestFactoryTests.swift in Sources */,
+				5B76A5861E6AD94100020167 /* EndpointProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +618,7 @@
 				5B76A5721E6AD64400020167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B76A5731E6AD64400020167 /* Build configuration list for PBXNativeTarget "JLDishwasherTests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +627,7 @@
 				5B76A5751E6AD64400020167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B76A5761E6AD64400020167 /* Build configuration list for PBXNativeTarget "JLDishwasherUITests" */ = {
 			isa = XCConfigurationList;
@@ -606,6 +636,7 @@
 				5B76A5781E6AD64400020167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

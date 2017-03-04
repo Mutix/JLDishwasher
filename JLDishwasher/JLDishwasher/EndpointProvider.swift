@@ -1,5 +1,5 @@
 //
-//  APIConfiguration.swift
+//  EndpointProvider.swift
 //  JLDishwasher
 //
 //  Created by Martin Oppetit on 04/03/2017.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct APIConfiguration {
+struct EndpointProvider: APIProviding {
     
-    private let APIKey: String
+    private let key: String
     private let scheme = "https"
     private let host = "api.johnlewis.com"
     private let productSearchPath = "/v1/products/search"
     
     init(key: String) {
-        APIKey = key
+        self.key = key
     }
     
     func productSearchURL(query: String, pageSize: Int) -> URL? {
@@ -35,7 +35,7 @@ struct APIConfiguration {
     }
     
     private func APIKeyQueryItem() -> URLQueryItem {
-        return URLQueryItem(name: "key", value: APIKey)
+        return URLQueryItem(name: "key", value: key)
     }
 
     private func pageSizeQueryItem(_ pageSize: Int) -> URLQueryItem {

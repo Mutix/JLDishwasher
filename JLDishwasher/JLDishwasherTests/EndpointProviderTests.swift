@@ -1,5 +1,5 @@
 //
-//  APIConfigurationTests.swift
+//  EndpointProviderTests.swift
 //  JLDishwasher
 //
 //  Created by Martin Oppetit on 04/03/2017.
@@ -9,14 +9,14 @@
 import XCTest
 @testable import JLDishwasher
 
-class APIConfigurationTests: XCTestCase {
+class EndpointProviderTests: XCTestCase {
     
     let APIKey = "12345"
-    var APIConfig: APIConfiguration?
+    var endpointProvider: APIProviding?
     
     override func setUp() {
         super.setUp()
-        APIConfig = APIConfiguration(key: APIKey)
+        endpointProvider = EndpointProvider(key: APIKey)
     }
     
     override func tearDown() {
@@ -41,7 +41,7 @@ class APIConfigurationTests: XCTestCase {
     
     func verifyProductSearchURL(searchTerm: String, pageSize: Int) {
         
-        guard let url = APIConfig?.productSearchURL(query: searchTerm, pageSize: pageSize) else {
+        guard let url = endpointProvider?.productSearchURL(query: searchTerm, pageSize: pageSize) else {
             XCTFail("URL shouldn't be nil")
             return
         }
