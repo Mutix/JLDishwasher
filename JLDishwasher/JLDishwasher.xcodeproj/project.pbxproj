@@ -11,8 +11,9 @@
 		5B76A5511E6AD64400020167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B76A54F1E6AD64400020167 /* Main.storyboard */; };
 		5B76A5531E6AD64400020167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B76A5521E6AD64400020167 /* Assets.xcassets */; };
 		5B76A5561E6AD64400020167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B76A5541E6AD64400020167 /* LaunchScreen.storyboard */; };
-		5B76A5611E6AD64400020167 /* JLDishwasherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5601E6AD64400020167 /* JLDishwasherTests.swift */; };
 		5B76A56C1E6AD64400020167 /* JLDishwasherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A56B1E6AD64400020167 /* JLDishwasherUITests.swift */; };
+		5B76A5831E6AD90800020167 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5821E6AD90800020167 /* APIConfiguration.swift */; };
+		5B76A5861E6AD94100020167 /* APIConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5851E6AD94100020167 /* APIConfigurationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +41,12 @@
 		5B76A5551E6AD64400020167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B76A5571E6AD64400020167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B76A55C1E6AD64400020167 /* JLDishwasherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLDishwasherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B76A5601E6AD64400020167 /* JLDishwasherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLDishwasherTests.swift; sourceTree = "<group>"; };
 		5B76A5621E6AD64400020167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B76A5671E6AD64400020167 /* JLDishwasherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLDishwasherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B76A56B1E6AD64400020167 /* JLDishwasherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLDishwasherUITests.swift; sourceTree = "<group>"; };
 		5B76A56D1E6AD64400020167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B76A5821E6AD90800020167 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		5B76A5851E6AD94100020167 /* APIConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfigurationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				5B76A57D1E6AD6AB00020167 /* App Delegate */,
+				5B76A5801E6AD8A900020167 /* Product Grid */,
+				5B76A5811E6AD8C500020167 /* Services */,
 				5B76A5791E6AD67B00020167 /* Resources */,
 				5B76A57C1E6AD69500020167 /* Supporting Files */,
 			);
@@ -105,8 +109,8 @@
 		5B76A55F1E6AD64400020167 /* JLDishwasherTests */ = {
 			isa = PBXGroup;
 			children = (
-				5B76A5601E6AD64400020167 /* JLDishwasherTests.swift */,
-				5B76A5621E6AD64400020167 /* Info.plist */,
+				5B76A5841E6AD92100020167 /* APIConfiguration */,
+				5B76A5871E6AE21500020167 /* Supporting Files */,
 			);
 			path = JLDishwasherTests;
 			sourceTree = "<group>";
@@ -160,6 +164,37 @@
 				5B76A54B1E6AD64400020167 /* AppDelegate.swift */,
 			);
 			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		5B76A5801E6AD8A900020167 /* Product Grid */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Product Grid";
+			sourceTree = "<group>";
+		};
+		5B76A5811E6AD8C500020167 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5821E6AD90800020167 /* APIConfiguration.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		5B76A5841E6AD92100020167 /* APIConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5851E6AD94100020167 /* APIConfigurationTests.swift */,
+			);
+			name = APIConfiguration;
+			sourceTree = "<group>";
+		};
+		5B76A5871E6AE21500020167 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5621E6AD64400020167 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +271,7 @@
 					5B76A55B1E6AD64400020167 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = VBVXK2592F;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 5B76A5471E6AD64400020167;
 					};
@@ -300,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B76A54C1E6AD64400020167 /* AppDelegate.swift in Sources */,
+				5B76A5831E6AD90800020167 /* APIConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B76A5611E6AD64400020167 /* JLDishwasherTests.swift in Sources */,
+				5B76A5861E6AD94100020167 /* APIConfigurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,11 +515,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VBVXK2592F;
 				INFOPLIST_FILE = JLDishwasherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.appwise.JLDishwasherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLDishwasher.app/JLDishwasher";
 			};
@@ -493,6 +532,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VBVXK2592F;
 				INFOPLIST_FILE = JLDishwasherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
