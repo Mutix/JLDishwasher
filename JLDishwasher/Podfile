@@ -1,0 +1,8 @@
+platform :ios, '10.0'
+source 'https://github.com/CocoaPods/Specs'
+use_frameworks!
+
+target 'JLDishwasher' do
+    pod 'SwiftyJSON'
+end
+
