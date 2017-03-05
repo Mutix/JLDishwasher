@@ -37,13 +37,15 @@ Would I have had/taken more time, here's a few things I would have done;
 - `ProductGridViewController` tests
   - injecting the `ProductSearchService` and `ProductGridDataSource` into the `ProductGridViewController` to enable this, rather then having the controller create its own instances
 - refactored the `ProductGridDataSourceTests` a bit more
-- probably renamed the `ProductSearcher` struct and `RemoteProductSearching` protocol a few times (`ProductFetcher` & `ProductFetching`, maybe?)
+- ~~probably renamed the `ProductSearcher` struct and `RemoteProductSearching` protocol a few times (`ProductFetcher` & `ProductFetching`, maybe?)~~
+  - Done
 - created a `Theme` to handle the navigation title customization, and vend various fonts and colors
 - added some sort of progress HUD or refresh control to the `ProductGridViewController`
 - custom flow layout for the product grid
 - nicer cell separators
 - better error handling
 - product detail page
+- UI tests
 
 
 That's about all I can think of for now, I'll let you discover the rest and look forward to discussing it with you in more detail!
