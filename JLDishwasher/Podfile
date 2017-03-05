@@ -4,5 +4,6 @@ use_frameworks!
 
 target 'JLDishwasher' do
     pod 'SwiftyJSON'
+    pod 'AlamofireImage', '~> 3.1'
 end
 
