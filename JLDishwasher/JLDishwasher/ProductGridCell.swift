@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ProductGridCell: UICollectionViewCell, ProductCellType {
 
@@ -15,7 +16,12 @@ class ProductGridCell: UICollectionViewCell, ProductCellType {
     @IBOutlet weak var priceLabel: UILabel?
     
     func configureWithProduct(_ product: ProductType) {
+        
         titleLabel?.text = product.title
         priceLabel?.text = "£\(product.price)"
+        
+        if let productImageURL = product.imageURL {
+            imageView?.af_setImage(withURL: productImageURL)
+        }
     }
 }
