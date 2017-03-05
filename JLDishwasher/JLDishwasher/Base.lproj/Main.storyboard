@@ -6,34 +6,59 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Product Grid View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProductGridViewController" customModule="JLDishwasher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-Py-Xnm">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="704"/>
+                                <color key="backgroundColor" red="0.87450980392156863" green="0.86274509803921573" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="zqm-ap-q5Z">
+                                    <size key="itemSize" width="255" height="352"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pkc-Py-Xnm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="73J-jE-Llc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="pkc-Py-Xnm" secondAttribute="bottom" id="Cge-wg-qGV"/>
+                            <constraint firstAttribute="trailing" secondItem="pkc-Py-Xnm" secondAttribute="trailing" id="Z7i-9j-jaG"/>
+                            <constraint firstItem="pkc-Py-Xnm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fD8-zf-Lpp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="o5V-fe-Eu9"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="productGrid" destination="pkc-Py-Xnm" id="oGG-L5-L3E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="786"/>
+            <point key="canvasLocation" x="750" y="786"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dPo-cY-46z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sv0-bx-6QS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HRj-Je-OxK">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="HRj-Je-OxK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

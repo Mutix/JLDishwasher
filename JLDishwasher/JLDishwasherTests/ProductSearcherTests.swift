@@ -36,7 +36,7 @@ class ProductSearcherTests: XCTestCase {
         
         let productSearcher = ProductSearcher(requestFactory: requestFactory, session: mockURLSession)
         
-        let expectation = self.expectation(description: "Bad request")
+        let expectation = self.expectation(description: "URL request check")
         
         productSearcher.getRemoteProductData(searchTerm: "test", pageSize: 1) { (data, error) in
             XCTAssertEqual(mockURLSession.capturedDataTaskRequest, stubRequest)

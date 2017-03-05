@@ -32,6 +32,8 @@
 		5B76A5E71E6C28B100020167 /* ProductGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5E51E6C28B000020167 /* ProductGridCell.swift */; };
 		5B76A5E81E6C28B100020167 /* ProductGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B76A5E61E6C28B000020167 /* ProductGridCell.xib */; };
 		5B76A5EA1E6C2CF500020167 /* ProductCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5E91E6C2CF500020167 /* ProductCellType.swift */; };
+		5B76A5F01E6C3D1300020167 /* ProductGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5EF1E6C3D1300020167 /* ProductGridViewController.swift */; };
+		5B76A5F31E6C4B7E00020167 /* ProductCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5F21E6C4B7E00020167 /* ProductCellBuilder.swift */; };
 		D940CD4C58517EFCCDBC2186 /* Pods_JLDishwasher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DEE752EA622FD9B3533ED3 /* Pods_JLDishwasher.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,8 @@
 		5B76A5E51E6C28B000020167 /* ProductGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductGridCell.swift; sourceTree = "<group>"; };
 		5B76A5E61E6C28B000020167 /* ProductGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductGridCell.xib; sourceTree = "<group>"; };
 		5B76A5E91E6C2CF500020167 /* ProductCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCellType.swift; sourceTree = "<group>"; };
+		5B76A5EF1E6C3D1300020167 /* ProductGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductGridViewController.swift; sourceTree = "<group>"; };
+		5B76A5F21E6C4B7E00020167 /* ProductCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCellBuilder.swift; sourceTree = "<group>"; };
 		851CAB1A7E1609173875212B /* Pods-JLDishwasher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLDishwasher.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLDishwasher/Pods-JLDishwasher.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,8 +203,8 @@
 		5B76A57B1E6AD68700020167 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				5B76A5541E6AD64400020167 /* LaunchScreen.storyboard */,
 				5B76A54F1E6AD64400020167 /* Main.storyboard */,
+				5B76A5541E6AD64400020167 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -320,6 +324,7 @@
 		5B76A5D41E6B413C00020167 /* Product Grid */ = {
 			isa = PBXGroup;
 			children = (
+				5B76A5EE1E6C3D0B00020167 /* View Controller */,
 				5B76A5D81E6B42AD00020167 /* Data Source */,
 				5B76A5E41E6C288300020167 /* Cell */,
 			);
@@ -367,8 +372,17 @@
 				5B76A5E51E6C28B000020167 /* ProductGridCell.swift */,
 				5B76A5E61E6C28B000020167 /* ProductGridCell.xib */,
 				5B76A5E91E6C2CF500020167 /* ProductCellType.swift */,
+				5B76A5F21E6C4B7E00020167 /* ProductCellBuilder.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		5B76A5EE1E6C3D0B00020167 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5EF1E6C3D1300020167 /* ProductGridViewController.swift */,
+			);
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 		C1C6C904DA22200427BCB41D /* Frameworks */ = {
@@ -574,6 +588,7 @@
 				5B76A5EA1E6C2CF500020167 /* ProductCellType.swift in Sources */,
 				5B76A5941E6AED3E00020167 /* EndpointProviding.swift in Sources */,
 				5B76A5CA1E6B371900020167 /* Product.swift in Sources */,
+				5B76A5F31E6C4B7E00020167 /* ProductCellBuilder.swift in Sources */,
 				5B76A5DA1E6B42C500020167 /* ProductGridDataSource.swift in Sources */,
 				5B76A58F1E6AE72D00020167 /* URLRequestFactory.swift in Sources */,
 				5B76A5831E6AD90800020167 /* EndpointProvider.swift in Sources */,
@@ -582,6 +597,7 @@
 				5B76A5E71E6C28B100020167 /* ProductGridCell.swift in Sources */,
 				5B76A5C61E6B370E00020167 /* ProductSearchService.swift in Sources */,
 				5B76A5C41E6B28A900020167 /* URLRequestProviding.swift in Sources */,
+				5B76A5F01E6C3D1300020167 /* ProductGridViewController.swift in Sources */,
 				5B76A5AF1E6B00DC00020167 /* ProductSearcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

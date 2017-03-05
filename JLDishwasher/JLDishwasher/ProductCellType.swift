@@ -14,6 +14,4 @@ protocol ProductCellType {
     var imageView: UIImageView? { get }
     var titleLabel: UILabel? { get }
     var priceLabel: UILabel? { get }
-    
-    func configureWithProduct(_ product: ProductType)
 }

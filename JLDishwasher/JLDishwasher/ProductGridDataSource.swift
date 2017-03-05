@@ -26,8 +26,8 @@ class ProductGridDataSource: NSObject, UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductGridCell", for: indexPath)
         
-        if let product = products?[indexPath.row] {
-            (cell as? ProductCellType)?.configureWithProduct(product)
+        if let product = products?[indexPath.row], let cell = cell as? ProductCellType {
+            ProductCellBuilder.configure(cell, withProduct: product)
         }
         
         return cell
