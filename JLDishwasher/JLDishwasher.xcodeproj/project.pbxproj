@@ -17,9 +17,9 @@
 		5B76A58F1E6AE72D00020167 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A58E1E6AE72D00020167 /* URLRequestFactory.swift */; };
 		5B76A5921E6AE90A00020167 /* URLRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5911E6AE90A00020167 /* URLRequestFactoryTests.swift */; };
 		5B76A5941E6AED3E00020167 /* EndpointProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5931E6AED3E00020167 /* EndpointProviding.swift */; };
-		5B76A5AF1E6B00DC00020167 /* ProductSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5AD1E6B00DC00020167 /* ProductSearcher.swift */; };
-		5B76A5B01E6B00DC00020167 /* RemoteProductSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5AE1E6B00DC00020167 /* RemoteProductSearching.swift */; };
-		5B76A5C21E6B280000020167 /* ProductSearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5C11E6B280000020167 /* ProductSearcherTests.swift */; };
+		5B76A5AF1E6B00DC00020167 /* ProductFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5AD1E6B00DC00020167 /* ProductFetcher.swift */; };
+		5B76A5B01E6B00DC00020167 /* ProductFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5AE1E6B00DC00020167 /* ProductFetching.swift */; };
+		5B76A5C21E6B280000020167 /* ProductFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5C11E6B280000020167 /* ProductFetcherTests.swift */; };
 		5B76A5C41E6B28A900020167 /* URLRequestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5C31E6B28A900020167 /* URLRequestProviding.swift */; };
 		5B76A5C61E6B370E00020167 /* ProductSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5C51E6B370E00020167 /* ProductSearchService.swift */; };
 		5B76A5CA1E6B371900020167 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5C81E6B371900020167 /* Product.swift */; };
@@ -73,9 +73,9 @@
 		5B76A58E1E6AE72D00020167 /* URLRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
 		5B76A5911E6AE90A00020167 /* URLRequestFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestFactoryTests.swift; sourceTree = "<group>"; };
 		5B76A5931E6AED3E00020167 /* EndpointProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointProviding.swift; sourceTree = "<group>"; };
-		5B76A5AD1E6B00DC00020167 /* ProductSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearcher.swift; sourceTree = "<group>"; };
-		5B76A5AE1E6B00DC00020167 /* RemoteProductSearching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProductSearching.swift; sourceTree = "<group>"; };
-		5B76A5C11E6B280000020167 /* ProductSearcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearcherTests.swift; sourceTree = "<group>"; };
+		5B76A5AD1E6B00DC00020167 /* ProductFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFetcher.swift; sourceTree = "<group>"; };
+		5B76A5AE1E6B00DC00020167 /* ProductFetching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFetching.swift; sourceTree = "<group>"; };
+		5B76A5C11E6B280000020167 /* ProductFetcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFetcherTests.swift; sourceTree = "<group>"; };
 		5B76A5C31E6B28A900020167 /* URLRequestProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestProviding.swift; sourceTree = "<group>"; };
 		5B76A5C51E6B370E00020167 /* ProductSearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearchService.swift; sourceTree = "<group>"; };
 		5B76A5C81E6B371900020167 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -281,18 +281,18 @@
 			isa = PBXGroup;
 			children = (
 				5B76A5C51E6B370E00020167 /* ProductSearchService.swift */,
-				5B76A5AE1E6B00DC00020167 /* RemoteProductSearching.swift */,
-				5B76A5AD1E6B00DC00020167 /* ProductSearcher.swift */,
+				5B76A5AE1E6B00DC00020167 /* ProductFetching.swift */,
+				5B76A5AD1E6B00DC00020167 /* ProductFetcher.swift */,
 			);
 			name = "Product Search";
 			sourceTree = "<group>";
 		};
-		5B76A5C01E6B27D600020167 /* Product Searcher */ = {
+		5B76A5C01E6B27D600020167 /* Product Fetcher */ = {
 			isa = PBXGroup;
 			children = (
-				5B76A5C11E6B280000020167 /* ProductSearcherTests.swift */,
+				5B76A5C11E6B280000020167 /* ProductFetcherTests.swift */,
 			);
-			name = "Product Searcher";
+			name = "Product Fetcher";
 			sourceTree = "<group>";
 		};
 		5B76A5C71E6B371000020167 /* Model */ = {
@@ -343,7 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				5B76A5D11E6B372E00020167 /* Product Search Service */,
-				5B76A5C01E6B27D600020167 /* Product Searcher */,
+				5B76A5C01E6B27D600020167 /* Product Fetcher */,
 				5B76A5901E6AE8F600020167 /* URL Request Factory */,
 				5B76A5841E6AD92100020167 /* APIConfiguration */,
 			);
@@ -593,12 +593,12 @@
 				5B76A58F1E6AE72D00020167 /* URLRequestFactory.swift in Sources */,
 				5B76A5831E6AD90800020167 /* EndpointProvider.swift in Sources */,
 				5B76A5CB1E6B371900020167 /* ProductType.swift in Sources */,
-				5B76A5B01E6B00DC00020167 /* RemoteProductSearching.swift in Sources */,
+				5B76A5B01E6B00DC00020167 /* ProductFetching.swift in Sources */,
 				5B76A5E71E6C28B100020167 /* ProductGridCell.swift in Sources */,
 				5B76A5C61E6B370E00020167 /* ProductSearchService.swift in Sources */,
 				5B76A5C41E6B28A900020167 /* URLRequestProviding.swift in Sources */,
 				5B76A5F01E6C3D1300020167 /* ProductGridViewController.swift in Sources */,
-				5B76A5AF1E6B00DC00020167 /* ProductSearcher.swift in Sources */,
+				5B76A5AF1E6B00DC00020167 /* ProductFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,7 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B76A5C21E6B280000020167 /* ProductSearcherTests.swift in Sources */,
+				5B76A5C21E6B280000020167 /* ProductFetcherTests.swift in Sources */,
 				5B76A5D31E6B374100020167 /* ProductSearchServiceTests.swift in Sources */,
 				5B76A5921E6AE90A00020167 /* URLRequestFactoryTests.swift in Sources */,
 				5B76A5D01E6B372A00020167 /* TestDataFactory.swift in Sources */,

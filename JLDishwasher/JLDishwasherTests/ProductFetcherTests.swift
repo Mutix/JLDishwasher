@@ -1,5 +1,5 @@
 //
-//  ProductSearcherTests.swift
+//  ProductFetcherTests.swift
 //  JLDishwasher
 //
 //  Created by Martin Oppetit on 04/03/2017.
@@ -9,16 +9,16 @@
 import XCTest
 @testable import JLDishwasher
 
-class ProductSearcherTests: XCTestCase {
+class ProductFetcherTests: XCTestCase {
     
     func testCompletesWithErrorGivenNilRequest() {
         
         let requestFactory = MockBadRequestFactory()
-        let productSearcher = ProductSearcher(requestFactory: requestFactory)
+        let productFetcher = ProductFetcher(requestFactory: requestFactory)
         
         let expectation = self.expectation(description: "Bad request")
         
-        productSearcher.getRemoteProductData(searchTerm: "test", pageSize: 1) { (data, error) in
+        productFetcher.fetchProductData(searchTerm: "test", pageSize: 1) { (data, error) in
             XCTAssertNil(data, "Data should be nil")
             XCTAssertEqual(error, .invalidRequest)
             expectation.fulfill()
@@ -34,11 +34,11 @@ class ProductSearcherTests: XCTestCase {
         
         let mockURLSession = MockURLSession(stubbingDataTask: MockDataTask())
         
-        let productSearcher = ProductSearcher(requestFactory: requestFactory, session: mockURLSession)
+        let productFetcher = ProductFetcher(requestFactory: requestFactory, session: mockURLSession)
         
         let expectation = self.expectation(description: "URL request check")
         
-        productSearcher.getRemoteProductData(searchTerm: "test", pageSize: 1) { (data, error) in
+        productFetcher.fetchProductData(searchTerm: "test", pageSize: 1) { (data, error) in
             XCTAssertEqual(mockURLSession.capturedDataTaskRequest, stubRequest)
             expectation.fulfill()
         }
@@ -56,11 +56,11 @@ class ProductSearcherTests: XCTestCase {
         
         let mockURLSession = MockURLSession(stubbingDataTask: dataTask)
         
-        let productSearcher = ProductSearcher(requestFactory: requestFactory, session: mockURLSession)
+        let productFetcher = ProductFetcher(requestFactory: requestFactory, session: mockURLSession)
         
         let expectation = self.expectation(description: "Failing data task")
         
-        productSearcher.getRemoteProductData(searchTerm: "test", pageSize: 1) { (data, error) in
+        productFetcher.fetchProductData(searchTerm: "test", pageSize: 1) { (data, error) in
             XCTAssertNil(data, "Data should be nil")
             XCTAssertEqual(error, .requestFailed)
             expectation.fulfill()
@@ -80,11 +80,11 @@ class ProductSearcherTests: XCTestCase {
         
         let mockURLSession = MockURLSession(stubbingDataTask: dataTask)
         
-        let productSearcher = ProductSearcher(requestFactory: requestFactory, session: mockURLSession)
+        let productFetcher = ProductFetcher(requestFactory: requestFactory, session: mockURLSession)
         
         let expectation = self.expectation(description: "Successful data task")
         
-        productSearcher.getRemoteProductData(searchTerm: "test", pageSize: 1) { (data, error) in
+        productFetcher.fetchProductData(searchTerm: "test", pageSize: 1) { (data, error) in
             XCTAssertNil(error, "Error should be nil")
             XCTAssertEqual(data, stubData)
             expectation.fulfill()

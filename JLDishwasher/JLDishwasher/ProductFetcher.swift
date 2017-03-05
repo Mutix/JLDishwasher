@@ -1,5 +1,5 @@
 //
-//  ProductSearcher.swift
+//  ProductFetcher.swift
 //  JLDishwasher
 //
 //  Created by Martin Oppetit on 04/03/2017.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ProductSearcher: RemoteProductSearching {
+struct ProductFetcher: ProductFetching {
     
     private let session: URLSession
     private let requestFactory: URLRequestProviding
@@ -18,16 +18,16 @@ struct ProductSearcher: RemoteProductSearching {
         self.session = session ?? URLSession.shared
     }
     
-    func getRemoteProductData(searchTerm: String, pageSize: Int, completion: @escaping RemoteProductSearchCompletion) {
+    func fetchProductData(searchTerm: String, pageSize: Int, completion: @escaping ProductFetchCompletion) {
         
         guard let request = requestFactory.generateProductSearchRequest(searchTerm: searchTerm, pageSize: pageSize) else {
-            completion(nil, RemoteProductSearchError.invalidRequest)
+            completion(nil, ProductFetchError.invalidRequest)
             return
         }
         
         let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
             guard error == nil else {
-                completion(nil, RemoteProductSearchError.requestFailed)
+                completion(nil, ProductFetchError.requestFailed)
                 return
             }
             completion(data, nil)

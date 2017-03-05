@@ -13,9 +13,9 @@ class ProductSearchServiceTests: XCTestCase {
     
     func testServiceReturnsNilProductsIfInvalidRequest() {
         
-        let productSearcher = MockFailingProductSearcher(.invalidRequest)
+        let productSearcher = MockFailingProductFetcher(.invalidRequest)
         
-        let service = ProductSearchService(productSearcher: productSearcher)
+        let service = ProductSearchService(productFetcher: productSearcher)
         
         let expectation = self.expectation(description: "Invalid request")
         
@@ -30,9 +30,9 @@ class ProductSearchServiceTests: XCTestCase {
     
     func testServiceReturnsNilProductsUponNetworkFailure() {
         
-        let productSearcher = MockFailingProductSearcher(.requestFailed)
+        let productSearcher = MockFailingProductFetcher(.requestFailed)
         
-        let service = ProductSearchService(productSearcher: productSearcher)
+        let service = ProductSearchService(productFetcher: productSearcher)
         
         let expectation = self.expectation(description: "Failed request")
         
@@ -48,9 +48,9 @@ class ProductSearchServiceTests: XCTestCase {
     func testServiceReturnsNilProductsUponResponseWithUnexpectedData() {
         
         let randomData = Data()
-        let productSearcher = MockSuccessfulProductSearcher(randomData)
+        let productFetcher = MockSuccessfulProductFetcher(randomData)
         
-        let service = ProductSearchService(productSearcher: productSearcher)
+        let service = ProductSearchService(productFetcher: productFetcher)
         
         let expectation = self.expectation(description: "Bad data")
         
@@ -70,9 +70,9 @@ class ProductSearchServiceTests: XCTestCase {
             return
         }
         
-        let productSearcher = MockSuccessfulProductSearcher(stubData)
+        let productFetcher = MockSuccessfulProductFetcher(stubData)
         
-        let service = ProductSearchService(productSearcher: productSearcher)
+        let service = ProductSearchService(productFetcher: productFetcher)
         
         let expectation = self.expectation(description: "Product count")
         
@@ -92,9 +92,9 @@ class ProductSearchServiceTests: XCTestCase {
             return
         }
         
-        let productSearcher = MockSuccessfulProductSearcher(stubData)
+        let productFetcher = MockSuccessfulProductFetcher(stubData)
         
-        let service = ProductSearchService(productSearcher: productSearcher)
+        let service = ProductSearchService(productFetcher: productFetcher)
         
         let expectation = self.expectation(description: "Product content")
         
@@ -128,7 +128,7 @@ class ProductSearchServiceTests: XCTestCase {
     }
 }
 
-private struct MockSuccessfulProductSearcher: RemoteProductSearching {
+private struct MockSuccessfulProductFetcher: ProductFetching {
     
     private var jsonDataResponse: Data
     
@@ -136,20 +136,20 @@ private struct MockSuccessfulProductSearcher: RemoteProductSearching {
         self.jsonDataResponse = data
     }
     
-    func getRemoteProductData(searchTerm: String, pageSize: Int, completion: @escaping RemoteProductSearchCompletion) {
+    func fetchProductData(searchTerm: String, pageSize: Int, completion: @escaping ProductFetchCompletion) {
         completion(jsonDataResponse, nil)
     }
 }
 
-private struct MockFailingProductSearcher: RemoteProductSearching {
+private struct MockFailingProductFetcher: ProductFetching {
     
-    private var error: RemoteProductSearchError?
+    private var error: ProductFetchError?
     
-    init(_ error: RemoteProductSearchError? = nil) {
+    init(_ error: ProductFetchError? = nil) {
         self.error = error
     }
     
-    func getRemoteProductData(searchTerm: String, pageSize: Int, completion: @escaping RemoteProductSearchCompletion) {
+    func fetchProductData(searchTerm: String, pageSize: Int, completion: @escaping ProductFetchCompletion) {
         completion(nil, error)
     }
 }

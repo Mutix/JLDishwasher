@@ -20,20 +20,20 @@ typealias ProductSearchServiceCompletion = (_ products: [ProductType]?, _ error:
 struct ProductSearchService {
     
     private let requestFactory: URLRequestFactory
-    private let productSearcher: RemoteProductSearching
+    private let productFetcher: ProductFetching
     
-    init(requestFactory: URLRequestFactory? = nil, productSearcher: RemoteProductSearching? = nil) {
+    init(requestFactory: URLRequestFactory? = nil, productFetcher: ProductFetching? = nil) {
         let requestFactory = requestFactory ?? URLRequestFactory.defaultInstance()
-        let productSearcher = productSearcher ?? ProductSearcher(requestFactory: requestFactory)
+        let productFetcher = productFetcher ?? ProductFetcher(requestFactory: requestFactory)
         self.requestFactory = requestFactory
-        self.productSearcher = productSearcher
+        self.productFetcher = productFetcher
     }
     
     func getProductsMatching(searchTerm: String, completion: @escaping ProductSearchServiceCompletion) {
         
         let defaultPageSize = 20
         
-        productSearcher.getRemoteProductData(searchTerm: searchTerm, pageSize: defaultPageSize) { (data, error) in
+        productFetcher.fetchProductData(searchTerm: searchTerm, pageSize: defaultPageSize) { (data, error) in
             
             if let error = error {
                 switch error {
