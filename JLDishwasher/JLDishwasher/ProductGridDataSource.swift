@@ -23,6 +23,13 @@ class ProductGridDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductGridCell", for: indexPath)
+        
+        if let product = products?[indexPath.row] {
+            (cell as? ProductCellType)?.configureWithProduct(product)
+        }
+        
+        return cell
     }
 }

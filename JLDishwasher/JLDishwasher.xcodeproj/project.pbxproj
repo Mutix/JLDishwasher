@@ -29,6 +29,9 @@
 		5B76A5D31E6B374100020167 /* ProductSearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5D21E6B374100020167 /* ProductSearchServiceTests.swift */; };
 		5B76A5DA1E6B42C500020167 /* ProductGridDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5D91E6B42C500020167 /* ProductGridDataSource.swift */; };
 		5B76A5DF1E6B42FB00020167 /* ProductGridDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5DE1E6B42FB00020167 /* ProductGridDataSourceTests.swift */; };
+		5B76A5E71E6C28B100020167 /* ProductGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5E51E6C28B000020167 /* ProductGridCell.swift */; };
+		5B76A5E81E6C28B100020167 /* ProductGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B76A5E61E6C28B000020167 /* ProductGridCell.xib */; };
+		5B76A5EA1E6C2CF500020167 /* ProductCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5E91E6C2CF500020167 /* ProductCellType.swift */; };
 		D940CD4C58517EFCCDBC2186 /* Pods_JLDishwasher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DEE752EA622FD9B3533ED3 /* Pods_JLDishwasher.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,9 @@
 		5B76A5D21E6B374100020167 /* ProductSearchServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearchServiceTests.swift; sourceTree = "<group>"; };
 		5B76A5D91E6B42C500020167 /* ProductGridDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductGridDataSource.swift; sourceTree = "<group>"; };
 		5B76A5DE1E6B42FB00020167 /* ProductGridDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductGridDataSourceTests.swift; sourceTree = "<group>"; };
+		5B76A5E51E6C28B000020167 /* ProductGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductGridCell.swift; sourceTree = "<group>"; };
+		5B76A5E61E6C28B000020167 /* ProductGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductGridCell.xib; sourceTree = "<group>"; };
+		5B76A5E91E6C2CF500020167 /* ProductCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCellType.swift; sourceTree = "<group>"; };
 		851CAB1A7E1609173875212B /* Pods-JLDishwasher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLDishwasher.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLDishwasher/Pods-JLDishwasher.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				5B76A5D81E6B42AD00020167 /* Data Source */,
+				5B76A5E41E6C288300020167 /* Cell */,
 			);
 			name = "Product Grid";
 			sourceTree = "<group>";
@@ -352,6 +359,16 @@
 				5B76A5DE1E6B42FB00020167 /* ProductGridDataSourceTests.swift */,
 			);
 			name = "Data Source";
+			sourceTree = "<group>";
+		};
+		5B76A5E41E6C288300020167 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5E51E6C28B000020167 /* ProductGridCell.swift */,
+				5B76A5E61E6C28B000020167 /* ProductGridCell.xib */,
+				5B76A5E91E6C2CF500020167 /* ProductCellType.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		C1C6C904DA22200427BCB41D /* Frameworks */ = {
@@ -479,6 +496,7 @@
 				5B76A5561E6AD64400020167 /* LaunchScreen.storyboard in Resources */,
 				5B76A5531E6AD64400020167 /* Assets.xcassets in Resources */,
 				5B76A5511E6AD64400020167 /* Main.storyboard in Resources */,
+				5B76A5E81E6C28B100020167 /* ProductGridCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B76A54C1E6AD64400020167 /* AppDelegate.swift in Sources */,
+				5B76A5EA1E6C2CF500020167 /* ProductCellType.swift in Sources */,
 				5B76A5941E6AED3E00020167 /* EndpointProviding.swift in Sources */,
 				5B76A5CA1E6B371900020167 /* Product.swift in Sources */,
 				5B76A5DA1E6B42C500020167 /* ProductGridDataSource.swift in Sources */,
@@ -560,6 +579,7 @@
 				5B76A5831E6AD90800020167 /* EndpointProvider.swift in Sources */,
 				5B76A5CB1E6B371900020167 /* ProductType.swift in Sources */,
 				5B76A5B01E6B00DC00020167 /* RemoteProductSearching.swift in Sources */,
+				5B76A5E71E6C28B100020167 /* ProductGridCell.swift in Sources */,
 				5B76A5C61E6B370E00020167 /* ProductSearchService.swift in Sources */,
 				5B76A5C41E6B28A900020167 /* URLRequestProviding.swift in Sources */,
 				5B76A5AF1E6B00DC00020167 /* ProductSearcher.swift in Sources */,
