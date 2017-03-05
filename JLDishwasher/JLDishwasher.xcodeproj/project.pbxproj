@@ -27,6 +27,8 @@
 		5B76A5CF1E6B372A00020167 /* stub_product_search_results.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B76A5CD1E6B372A00020167 /* stub_product_search_results.json */; };
 		5B76A5D01E6B372A00020167 /* TestDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5CE1E6B372A00020167 /* TestDataFactory.swift */; };
 		5B76A5D31E6B374100020167 /* ProductSearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5D21E6B374100020167 /* ProductSearchServiceTests.swift */; };
+		5B76A5DA1E6B42C500020167 /* ProductGridDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5D91E6B42C500020167 /* ProductGridDataSource.swift */; };
+		5B76A5DF1E6B42FB00020167 /* ProductGridDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A5DE1E6B42FB00020167 /* ProductGridDataSourceTests.swift */; };
 		D940CD4C58517EFCCDBC2186 /* Pods_JLDishwasher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DEE752EA622FD9B3533ED3 /* Pods_JLDishwasher.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		5B76A5CD1E6B372A00020167 /* stub_product_search_results.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stub_product_search_results.json; sourceTree = "<group>"; };
 		5B76A5CE1E6B372A00020167 /* TestDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataFactory.swift; sourceTree = "<group>"; };
 		5B76A5D21E6B374100020167 /* ProductSearchServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearchServiceTests.swift; sourceTree = "<group>"; };
+		5B76A5D91E6B42C500020167 /* ProductGridDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductGridDataSource.swift; sourceTree = "<group>"; };
+		5B76A5DE1E6B42FB00020167 /* ProductGridDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductGridDataSourceTests.swift; sourceTree = "<group>"; };
 		851CAB1A7E1609173875212B /* Pods-JLDishwasher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLDishwasher.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLDishwasher/Pods-JLDishwasher.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				5B76A57D1E6AD6AB00020167 /* App Delegate */,
+				5B76A5D41E6B413C00020167 /* Product Grid */,
 				5B76A5C71E6B371000020167 /* Model */,
 				5B76A5811E6AD8C500020167 /* Services */,
 				5B76A5791E6AD67B00020167 /* Resources */,
@@ -151,11 +156,9 @@
 		5B76A55F1E6AD64400020167 /* JLDishwasherTests */ = {
 			isa = PBXGroup;
 			children = (
-				5B76A5D11E6B372E00020167 /* Product Search Service */,
-				5B76A5C01E6B27D600020167 /* Product Searcher */,
-				5B76A5901E6AE8F600020167 /* URL Request Factory */,
-				5B76A5841E6AD92100020167 /* APIConfiguration */,
-				5B76A5CC1E6B371E00020167 /* Test Helpers */,
+				5B76A5DC1E6B42D600020167 /* Product Grid */,
+				5B76A5DB1E6B42CB00020167 /* Services */,
+				5B76A5CC1E6B371E00020167 /* Test Data */,
 				5B76A5871E6AE21500020167 /* Supporting Files */,
 			);
 			path = JLDishwasherTests;
@@ -291,13 +294,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		5B76A5CC1E6B371E00020167 /* Test Helpers */ = {
+		5B76A5CC1E6B371E00020167 /* Test Data */ = {
 			isa = PBXGroup;
 			children = (
 				5B76A5CE1E6B372A00020167 /* TestDataFactory.swift */,
 				5B76A5CD1E6B372A00020167 /* stub_product_search_results.json */,
 			);
-			name = "Test Helpers";
+			name = "Test Data";
 			sourceTree = "<group>";
 		};
 		5B76A5D11E6B372E00020167 /* Product Search Service */ = {
@@ -306,6 +309,49 @@
 				5B76A5D21E6B374100020167 /* ProductSearchServiceTests.swift */,
 			);
 			name = "Product Search Service";
+			sourceTree = "<group>";
+		};
+		5B76A5D41E6B413C00020167 /* Product Grid */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5D81E6B42AD00020167 /* Data Source */,
+			);
+			name = "Product Grid";
+			sourceTree = "<group>";
+		};
+		5B76A5D81E6B42AD00020167 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5D91E6B42C500020167 /* ProductGridDataSource.swift */,
+			);
+			name = "Data Source";
+			sourceTree = "<group>";
+		};
+		5B76A5DB1E6B42CB00020167 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5D11E6B372E00020167 /* Product Search Service */,
+				5B76A5C01E6B27D600020167 /* Product Searcher */,
+				5B76A5901E6AE8F600020167 /* URL Request Factory */,
+				5B76A5841E6AD92100020167 /* APIConfiguration */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		5B76A5DC1E6B42D600020167 /* Product Grid */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5DD1E6B42E600020167 /* Data Source */,
+			);
+			name = "Product Grid";
+			sourceTree = "<group>";
+		};
+		5B76A5DD1E6B42E600020167 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				5B76A5DE1E6B42FB00020167 /* ProductGridDataSourceTests.swift */,
+			);
+			name = "Data Source";
 			sourceTree = "<group>";
 		};
 		C1C6C904DA22200427BCB41D /* Frameworks */ = {
@@ -509,6 +555,7 @@
 				5B76A54C1E6AD64400020167 /* AppDelegate.swift in Sources */,
 				5B76A5941E6AED3E00020167 /* EndpointProviding.swift in Sources */,
 				5B76A5CA1E6B371900020167 /* Product.swift in Sources */,
+				5B76A5DA1E6B42C500020167 /* ProductGridDataSource.swift in Sources */,
 				5B76A58F1E6AE72D00020167 /* URLRequestFactory.swift in Sources */,
 				5B76A5831E6AD90800020167 /* EndpointProvider.swift in Sources */,
 				5B76A5CB1E6B371900020167 /* ProductType.swift in Sources */,
@@ -527,6 +574,7 @@
 				5B76A5D31E6B374100020167 /* ProductSearchServiceTests.swift in Sources */,
 				5B76A5921E6AE90A00020167 /* URLRequestFactoryTests.swift in Sources */,
 				5B76A5D01E6B372A00020167 /* TestDataFactory.swift in Sources */,
+				5B76A5DF1E6B42FB00020167 /* ProductGridDataSourceTests.swift in Sources */,
 				5B76A5861E6AD94100020167 /* EndpointProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

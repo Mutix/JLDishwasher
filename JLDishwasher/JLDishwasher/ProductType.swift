@@ -10,11 +10,8 @@ import Foundation
 import SwiftyJSON
 
 protocol ProductType {
-    
     var productID: String { get }
     var title: String { get }
     var price: String { get }
     var imageURL: URL? { get }
-    
-    init(json: JSON)
 }
