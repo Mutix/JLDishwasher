@@ -1,5 +1,8 @@
 # JLDishwasher
 
+[![Build Status](https://travis-ci.org/Mutix/JLDishwasher.svg?branch=master)](https://travis-ci.org/Mutix/JLDishwasher) [![Coverage Status](https://coveralls.io/repos/github/Mutix/JLDishwasher/badge.svg?branch=master)](https://coveralls.io/github/Mutix/JLDishwasher?branch=master)
+
+
 Hi John Lewis crew, and thanks for the opportunity to showcase some code.
 
 First of all, you'll notice I only completed the product grid section of the test - I preferred building the product grid to a standard which I'm happy with, and that ended up filling the half day timebox I'd set myself for the exercise.
