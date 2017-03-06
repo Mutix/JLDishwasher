@@ -1,0 +1,23 @@
+language: objective-c
+
+branches:
+ only:
+ - master
+
+xcode_workspace: JLDishwasher/JLDishwasher.xcworkspace
+xcode_scheme: JLDishwasher
+osx_image: xcode8.2
+xcode_sdk: iphonesimulator10.1
+
+before_install:
+    - gem install specific_install
+    - gem specific_install -l https://github.com/venmo/slather.git
+    - export IOS_SIMULATOR_UDID=$(instruments -s devices | grep "$ios_device ($ios_version)" | sed -E 's/.*\[([0-9A-F-]+)\].*/\1/g')
+    - echo "Prelaunching iOS simulator $IOS_SIMULATOR_UDID"
+    - open -a "simulator" --args -CurrentDeviceUDID $IOS_SIMULATOR_UDID
+
+script:
+- xcodebuild clean test -workspace JLDishwasher/JLDishwasher.xcworkspace -scheme JLDishwasher -destination 'platform=iOS Simulator,name=iPad Air 2' GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+
+after_success:
+  - cd $TRAVIS_BUILD_DIR && slather
